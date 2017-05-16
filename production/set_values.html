@@ -25,6 +25,12 @@
     <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+    <script  type="text/javascript">
+        function store(){
+            var inputAmount= document.getElementById("amount");
+            localStorage.setItem("amount", inputAmount.value);
+        }
+    </script>
 </head>
 
 <!--Side bar coding-->
@@ -238,7 +244,7 @@
                                 <label for="amount">Weekends Kw:</label>
                                 <input type="number" class="form-control" style="width:19%" id="weekendkw" placeholder="Enter Kw" name="amount">
                                 <br>
-                                <button type="submit" class="btn btn-default">Submit</button></div>
+                                <button onclick="store()" type="button" class="btn btn-default">Submit</button></div>
                             </form>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-12 bg-white">
